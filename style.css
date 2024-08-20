@@ -1,0 +1,154 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.apple-logo {
+  width: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007aff;
+}
+
+button {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007aff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Verification Section Styles */
+#verificationSection {
+  text-align: center;
+}
+
+.numperAlert {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.verification-code {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.verification-code input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button {
+  width: 48%;
+}
+
+/* Password Toggle Styles */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+
+  .verification-code input {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

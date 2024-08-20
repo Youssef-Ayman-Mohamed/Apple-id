@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Your Apple ID</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- القسم الأول: Create Your Apple ID -->
+    <div id="createIDSection" class="container">
+      <div class="logo">
+        <img
+          class="apple-logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+          alt="Apple Logo"
+        />
+      </div>
+      <h2 class="text-center">Create Your Apple ID</h2>
+      <form id="appleIDForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="First Name" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Last Name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Phone Number" maxlength="11" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div style="position: relative">
+            <input type="password" id="password" placeholder="Password" required />
+            <span class="password-toggle" onclick="togglePassword()">Show</span>
+          </div>
+          <span id="strong"></span>
+        </div>
+        <button type="submit">Continue</button>
+      </form>
+      <p class="text-center mt-20">
+        By continuing, you agree to Apple's <a href="#">Privacy Policy</a> and
+        <a href="#">Terms of Use</a>.
+      </p>
+    </div>
+
+    <!-- القسم الثاني: صفحة التأكيد أو الصفحة التالية -->
+    <div id="verificationSection" class="container hidden">
+      <img class="apple-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+      <h1>Apple ID</h1>
+      <p class="numperAlert"></p>
+      <div class="verification-code">
+        <input type="text" maxlength="1" oninput="moveToNextInput(this)">
+        <input type="text" maxlength="1" oninput="moveToNextInput(this)">
+        <input type="text" maxlength="1" oninput="moveToNextInput(this)">
+        <input type="text" maxlength="1" oninput="moveToNextInput(this)">
+        <input type="text" maxlength="1" oninput="moveToNextInput(this)">
+        <input type="text" maxlength="1" oninput="moveToNextInput(this)">
+      </div>
+      <div class="buttons">
+        <button>Did not get a verification code?</button>
+        <button>Continue</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
